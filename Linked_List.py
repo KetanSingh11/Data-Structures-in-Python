@@ -1,15 +1,15 @@
-#===============================================================================
+#===================================================
 """ Linked List Implementation in PYTHON """
-#===============================================================================
+#===================================================
 
 
 class Node(object):
     def __init__(self, data=None, next=None):
-        self.data = data    #contains the data
-        self.next = next    #contains the reference
+        self.data = data    # contains the data
+        self.next = next    # contains the reference
         
     def __str__(self):
-        return str(self.data)   #prints the data
+        return str(self.data)   # prints the data
     
 
 class LinkedList(object):
@@ -28,8 +28,7 @@ class LinkedList(object):
         new_node = Node(data, self.head)
         self.head = new_node    #here, making new node as new head
         self.size += 1
-        
-            
+
     def delete(self, data):
         '''
         # Start from the Root node
@@ -63,17 +62,15 @@ class LinkedList(object):
     def printList(self):
         current = self.head
         while current:
-            print str(current.data) + "-->",
+            print(str(current.data) + "-->",end="")
             current = current.next
-        print "NULL"
+        print("NULL")
     
     def get_size(self):    
-        print "LinkedList size: " + str(self.size)
- 
-            
+        print("LinkedList size: " + str(self.size))
+
 
 if __name__ == "__main__":
-    
     a = LinkedList()
     a.insert_first(10)
     a.insert_first(20)
@@ -83,11 +80,11 @@ if __name__ == "__main__":
     
     a.delete(10)
     a.printList()
-    print a.isEmpty()
+    print(a.isEmpty())
     
     a.delete(20)
     a.printList()
     a.delete(30)
     a.printList()
-    print a.isEmpty()
+    print(a.isEmpty())
     
